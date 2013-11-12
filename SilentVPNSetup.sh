@@ -42,19 +42,19 @@
 vpnUuid=`uuidgen`
 
 # Address of VPN server
-serverName=”"
+serverName=""
 
 # The group of usernames that is allowed in
-groupName=”"
+groupName=""
 
 # The name of connection type displayed in GUI
-labelName=”"
+labelName=""
 
 # The Shared Secret
-sharedSecret=”"
+sharedSecret=""
 
 # The user this VPN config is for
-userName=”"
+userName=""
 
 ###########################################################################
 # SCRIPT
