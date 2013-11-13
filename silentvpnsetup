@@ -39,7 +39,7 @@
 ###########################################################################
 
 # The random UUID for this config
-vpnUuid=`uuidgen`
+vpnUuid='uuidgen'
 
 # Address of VPN server
 serverName=""
@@ -90,8 +90,8 @@ if [ "$9" != "" ] && [ "$userName" == "" ]; then
 	userName=$9
 fi
 
-loggedInUser=`/bin/ls -l /dev/console | /usr/bin/awk ‘{ print $3 }’`
-macModel=`system_profiler SPHardwareDataType | grep “Model Name:” | awk ‘{ print $3 }’`
+loggedInUser='/bin/ls -l /dev/console | /usr/bin/awk ‘{ print $3 }’'
+macModel='system_profiler SPHardwareDataType | grep “Model Name:” | awk ‘{ print $3 }’'
 
 if [ "$macModel" == "MacBook" ]; then
 
@@ -123,7 +123,7 @@ if [ "$macModel" == "MacBook" ]; then
 	/usr/libexec/PlistBuddy -c “Add :NetworkServices:$vpnUuid:IPSec:XAuthPasswordEncryption string Prompt” /Library/Preferences/SystemConfiguration/preferences.plist
 	
 	# At this point, we should have only one Network Set (Automatic) so we find out its UUID — errr, messy
-	autoUuid=`/usr/libexec/Plistbuddy -c “Print :Sets” /Library/Preferences/SystemConfiguration/preferences.plist | grep -B1 -m1 Automatic | grep Dict | awk ‘{ print $1 }’`
+	autoUuid='/usr/libexec/Plistbuddy -c “Print :Sets” /Library/Preferences/SystemConfiguration/preferences.plist | grep -B1 -m1 Automatic | grep Dict | awk ‘{ print $1 }’'
 	
 	# and we add our newly created config to the default set
 	/usr/libexec/PlistBuddy -c “Add :Sets:$autoUuid:Network:Service:$vpnUuid dict” /Library/Preferences/SystemConfiguration/preferences.plist
