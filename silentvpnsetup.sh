@@ -1,7 +1,7 @@
 #!/bin/sh
 ####################################################################################################
 #
-# More information: http://macmule.com/2011/12/22/how-to-silently-setup-vpn-on-10-6-10-7/
+# More information: http://macmule.com/2011/12/22/howtosilentlysetupvpnon106107/
 #
 # GitRepo: https://github.com/macmule/10.6SilentVPNSetup/
 #
