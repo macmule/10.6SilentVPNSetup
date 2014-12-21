@@ -3,7 +3,7 @@
 #
 # More information: http://macmule.com/2011/12/22/how-to-silently-setup-vpn-on-10-6-10-7/
 #
-# GitRepo: https://github.com/macmule/10.6SilentVPNSetup
+# GitRepo: https://github.com/macmule/10.6SilentVPNSetup/
 #
 # License: http://macmule.com/license/
 #
@@ -68,6 +68,7 @@ fi
 loggedInUser=`/bin/ls -l /dev/console | /usr/bin/awk ‘{ print $3 }’`
 macModel=`system_profiler SPHardwareDataType | grep “Model Name:” | awk ‘{ print $3 }’`
 
+# Check that we're running this on a MacBook
 if [ "$macModel" == "MacBook" ]; then
 
 	# Setup Keychain shared secret granting appropriate access for the OS apps
