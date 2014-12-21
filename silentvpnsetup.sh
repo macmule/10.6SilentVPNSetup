@@ -65,8 +65,8 @@ if [ "$9" != "" ] && [ "$userName" == "" ]; then
 	userName=$9
 fi
 
-loggedInUser=`/bin/ls -l /dev/console | /usr/bin/awk ‘{ print $3 }’`
-macModel=`system_profiler SPHardwareDataType | grep "Model Name:" | awk ‘{ print $3 }’`
+loggedInUser=`/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }'`
+macModel=`system_profiler SPHardwareDataType | grep "Model Name:" | awk '{ print $3 }'`
 
 # Check that we're running this on a MacBook
 if [ "$macModel" == "MacBook" ]; then
