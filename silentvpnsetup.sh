@@ -68,7 +68,7 @@ fi
 loggedInUser=`/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }'`
 macModel=`system_profiler SPHardwareDataType | grep "Model Name:" | awk '{ print $3 }'`
 
-# Check that we're running this on a MacBook
+# Check that we are running this on a MacBook
 if [ "$macModel" == "MacBook" ]; then
 
 	# Setup Keychain shared secret granting appropriate access for the OS apps
