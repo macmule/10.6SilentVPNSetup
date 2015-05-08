@@ -82,8 +82,8 @@ if [ "$macModel" == "MacBook" ]; then
 	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Proxies dict" /Library/Preferences/SystemConfiguration/preferences.plist
 	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Proxies:ExceptionList array" /Library/Preferences/SystemConfiguration/preferences.plist
 	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Proxies:ExceptionList:0 string \*\.local" /Library/Preferences/SystemConfiguration/preferences.plist
-	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Proxies:ExceptionList:1 string 169\.254\/16″ /Library/Preferences/SystemConfiguration/preferences.plist
-	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Proxies:FTPPassive integer 1″ /Library/Preferences/SystemConfiguration/preferences.plist
+	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Proxies:ExceptionList:1 string 169\.254\/16" /Library/Preferences/SystemConfiguration/preferences.plist
+	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Proxies:FTPPassive integer 1" /Library/Preferences/SystemConfiguration/preferences.plist
 	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:SMB dict" /Library/Preferences/SystemConfiguration/preferences.plist
 	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:UserDefinedName string $labelName" /Library/Preferences/SystemConfiguration/preferences.plist
 	/usr/libexec/PlistBuddy -c "Add :NetworkServices:$vpnUuid:Interface dict" /Library/Preferences/SystemConfiguration/preferences.plist
